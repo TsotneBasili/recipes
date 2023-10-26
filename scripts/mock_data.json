@@ -1,0 +1,24 @@
+{
+  "data": [
+    {"name": "Spaghetti Carbonara", "ingredients": "Spaghetti, eggs, Pecorino Romano cheese, guanciale, black pepper", "time": 20, "process": "Cook pasta, fry guanciale, mix eggs and cheese, toss with pasta"},
+    {"name": "Chicken Alfredo", "ingredients": "Chicken breasts, fettuccine pasta, heavy cream, Parmesan cheese, garlic", "time": 30, "process": "Cook chicken, make sauce with cream, cheese, and garlic, toss with pasta"},
+    {"name": "Vegetable Stir-Fry", "ingredients": "Mixed vegetables, tofu, soy sauce, ginger, garlic", "time": 15, "process": "Stir-fry veggies and tofu, add sauce, serve over rice"},
+    {"name": "Classic Margherita Pizza", "ingredients": "Pizza dough, tomatoes, fresh mozzarella, basil, olive oil", "time": 12, "process": "Roll out dough, add toppings, bake in a hot oven"},
+    {"name": "Beef Tacos", "ingredients": "Ground beef, taco seasoning, tortillas, lettuce, tomatoes", "time": 20, "process": "Cook beef with seasoning, assemble tacos"},
+    {"name": "Cesar Salad", "ingredients": "Romaine lettuce, croutons, Parmesan cheese, Caesar dressing", "time": 10, "process": "Toss ingredients with dressing, top with croutons"},
+    {"name": "Mushroom Risotto", "ingredients": "Arborio rice, mushrooms, onions, white wine, broth", "time": 25, "process": "Sauté onions and mushrooms, add rice and liquids, cook until creamy"},
+    {"name": "Baked Salmon", "ingredients": "Salmon fillets, lemon, dill, butter", "time": 20, "process": "Season salmon, bake with lemon and dill"},
+    {"name": "Pancakes", "ingredients": "Flour, milk, eggs, sugar, baking powder", "time": 15, "process": "Mix ingredients, cook on a griddle"},
+    {"name": "Chicken Noodle Soup", "ingredients": "Chicken, noodles, carrots, celery, broth", "time": 30, "process": "Boil chicken, add veggies and noodles, simmer"},
+    {"name": "Beef Stroganoff", "ingredients": "Beef sirloin, mushrooms, onions, sour cream, paprika", "time": 25, "process": "Sauté beef and onions, add mushrooms, stir in sour cream and paprika"},
+    {"name": "Greek Salad", "ingredients": "Cucumbers, tomatoes, feta cheese, olives, olive oil", "time": 10, "process": "Mix ingredients with olive oil dressing"},
+    {"name": "Egg Fried Rice", "ingredients": "Rice, eggs, peas, carrots, soy sauce", "time": 15, "process": "Scramble eggs, add rice and veggies, stir in soy sauce"},
+    {"name": "Sushi Rolls", "ingredients": "Sushi rice, seaweed, fish, vegetables, soy sauce", "time": 30, "process": "Roll ingredients in seaweed, slice into rolls"},
+    {"name": "Lentil Soup", "ingredients": "Lentils, onions, carrots, celery, broth", "time": 40, "process": "Sauté veggies, add lentils and broth, simmer"},
+    {"name": "Shrimp Scampi", "ingredients": "Shrimp, garlic, butter, lemon, parsley", "time": 15, "process": "Sauté shrimp in garlic and butter, add lemon and parsley"},
+    {"name": "Cauliflower Curry", "ingredients": "Cauliflower, chickpeas, tomatoes, curry spices, coconut milk", "time": 25, "process": "Cook cauliflower and chickpeas in curry sauce"},
+    {"name": "Homemade Mac and Cheese", "ingredients": "Macaroni, cheddar cheese, milk, butter, flour", "time": 20, "process": "Make cheese sauce, mix with cooked macaroni"},
+    {"name": "Tomato Basil Bruschetta", "ingredients": "Tomatoes, basil, garlic, olive oil, baguette", "time": 15, "process": "Mix ingredients, serve on toasted bread"},
+    {"name": "Spinach and Feta Stuffed Chicken", "ingredients": "Chicken breasts, spinach, feta cheese, garlic, herbs", "time": 30, "process": "Stuff chicken with spinach and feta, bake until done"}
+  ]
+}
