@@ -14,6 +14,37 @@ class RecipeView(viewsets.ModelViewSet):
     serializer_class = RecipeSerializer
     queryset = Recipe.objects.all()
 
+    def list(self, request, *args, **kwargs):
+        pk = self.request.user.pk
+
+        queryset = Recipe.objects.filter(user=pk)
+        serializer = self.get_serializer(queryset, many=True)
+
+        return Response(serializer.data)
+
+    def create(self, request, *args, **kwargs):
+        mutable_data = request.data.copy()
+        mutable_data['user'] = request.user.pk
+
+        serializer = self.get_serializer(data=mutable_data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    def retrieve(self, request, pk=None, *args, **kwargs):
+        try:
+            recipe = Recipe.objects.get(pk=pk)
+
+            if recipe.user == request.user:
+                serializer = self.get_serializer(recipe)
+                return Response(serializer.data)
+            else:
+                return Response({"detail": "Recipe does not belong to the currently logged-in user."})
+
+        except:
+            return Response({"detail": "Recipe not found."})
+
+
 
 class RegisterView(generics.GenericAPIView):
     serializer_class = UserSerializer
@@ -26,11 +57,8 @@ class RegisterView(generics.GenericAPIView):
                 username=serializer.validated_data['username'],
                 email=serializer.validated_data['email'],
             )
-            # Use set_password to securely hash the password
             user.set_password(serializer.validated_data['password'])
             user.save()
-            # user = User.objects.create(username="username", email="email", password="password")
-            # user.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
