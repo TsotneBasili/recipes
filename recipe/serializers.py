@@ -7,7 +7,8 @@ from recipe.models import Recipe
 class RecipeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Recipe
-        fields = ("id", 'name', 'ingredients', 'time', 'process', 'user')
+        exclude = ['user']
+
 
 
 class UserSerializer(serializers.ModelSerializer):

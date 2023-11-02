@@ -25,10 +25,10 @@ class RecipeView(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         mutable_data = request.data.copy()
         mutable_data['user'] = request.user.pk
+        serializer = self.serializer_class(data=mutable_data)
 
-        serializer = self.get_serializer(data=mutable_data)
         serializer.is_valid(raise_exception=True)
-        serializer.save()
+        serializer.save(user=request.user)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
     def retrieve(self, request, pk=None, *args, **kwargs):
@@ -45,7 +45,6 @@ class RecipeView(viewsets.ModelViewSet):
             return Response({"detail": "Recipe not found."})
 
 
-
 class RegisterView(generics.GenericAPIView):
     serializer_class = UserSerializer
 
@@ -53,6 +52,9 @@ class RegisterView(generics.GenericAPIView):
 
         serializer = self.get_serializer(data=request.data)
         if serializer.is_valid():
+            # user = User.objects.create_user(username=serializer.validated_data['username'],
+            #                                 email=serializer.validated_data['email'],
+            #                                 password=serializer.validated_data['password'])
             user = get_user_model().objects.create(
                 username=serializer.validated_data['username'],
                 email=serializer.validated_data['email'],
